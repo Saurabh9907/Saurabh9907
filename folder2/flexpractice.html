@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- version five of html, doctype use for consistency -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox.</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .parents {
+        border: 4px solid red;
+        display: flex;
+        height: 90vh;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: antiquewhite;
+        flex-wrap: wrap;
+      }
+      /* flex dirction by defult row hota hai */
+      .Box {
+        border: 4px solid blue;
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        text-align: center;
+        align-content: center;
+      }
+      #Box-1 {
+        order: 5;
+      }
+      #Box-2 {
+        order: 2;
+        flex-grow: 4;
+        align-self: self-end;
+      }
+      #Box-4{ flex-grow: 7;}
+    </style>
+  </head>
+  <body>
+    <div class="parents">
+      <div class="Box" id="Box-1">Box-1</div>
+      <div class="Box" id="Box-2">Box-2</div>
+      <div class="Box" id="Box-3">Box-3</div>
+      <div class="Box" id="Box-4">Box-4</div>
+      <div class="Box" id="Box-5">Box-5</div>
+      <div class="Box" id="Box-6">Box-6</div>
+      <div class="Box" id="Box-7">Box-7</div>
+      <div class="Box" id="Box-8">Box-8</div>
+    </div>
+  </body>
+</html>

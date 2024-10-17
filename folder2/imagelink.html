@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Image Map</title>
+</head>
+<body>
+    <h1>Interactive Image with Clickable Areas</h1>
+    <p>Click on different parts of the image to open new links in a new tab.</p>
+
+    <!-- Image with map -->
+    <img src="https://www.shutterstock.com/shutterstock/photos/1462939574/display_1500/stock-photo-silhouette-of-a-man-flying-up-in-the-sky-in-the-bright-rays-of-the-sun-with-arms-spread-apart-1462939574.jpg" alt="Interactive Map" usemap="#image-map" style="width: 500px; height: auto;">
+
+    <!-- Define clickable areas on the image -->
+    <map name="image-map">
+        <!-- Each area defines a clickable region with a shape (rect, circle, poly) and coordinates -->
+        <!-- Rectangle area -->
+        <area shape="rect" coords="34,44,270,350" alt="Link 1" href="https://www.google.com" target="_blank">
+        <!-- Circle area -->
+        <area shape="circle" coords="450,150,50" alt="Link 2" href="https://www.google.com" target="_blank">
+        <!-- Polygon area -->
+        <area shape="poly" coords="100,200,150,250,200,200,150,150" alt="Link 3" href="https://www.google.com" target="_blank">
+        <!-- Another rectangle area -->
+        <area shape="rect" coords="300,100,450,250" alt="Link 4" href="https://www.google.com" target="_blank">
+    </map>
+</body>
+</html>

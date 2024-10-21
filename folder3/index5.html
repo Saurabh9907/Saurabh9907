@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parent">
+      <button id="btn1">Button 1</button>
+      <button id="btn1">Button 2</button>
+      <p id="para1">Para 1</p>
+      <p id="para2">Para 2</p>
+    </div>
+    <script>
+      document
+        .getElementById("parent")
+        .addEventListener("click", function (event) {
+          if (event.target.tagName === "BUTTON") {
+            alert(event.target.innerHtml + "was clicked!");
+          }
+          if (event.target.tagName === "P") {
+            alert((event.target.style.color = "blue"));
+          }
+        });
+    </script>
+  </body>
+</html>

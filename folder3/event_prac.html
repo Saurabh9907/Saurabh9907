@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let button = document.createElement("button");
+        button.textContent = "Click Me";
+        button.id = "button";
+        document.body.appendChild(button);
+
+        let para = document.createElement("p");
+        para.textContent = "------Insert Here-------";
+        para.id = "para"
+        document.body.appendChild(para);
+        
+        document.getElementById("button").onclick = function(){
+            document.getElementById("para").innerHTML="itsrohitgiri"
+        }
+        document.getElementById("button").addEventListener("click", function(){
+        document.getElementById("para").innerHTML="HI"
+        });
+    </script>
+</body>
+</html>

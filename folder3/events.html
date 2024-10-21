@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Example</title>
+</head>
+
+<body>
+
+    <h1>Events in JavaScript</h1>
+
+    <button id="clickButton">Click Me!</button>
+    <p id="clickMessage"></p>
+
+    <label for="nameInput">Name: </label>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <p id="focusMessage"></p>
+
+    <label for="colorSelect">Select a color: </label>
+    <select id="colorSelect">
+        <option value="">--Choose--</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+    </select>
+    <p id="colorMessage"></p>
+
+    <label for="textInput">Type something: </label>
+    <input type="text" id="textInput" placeholder="Start typing...">
+    <p id="keyMessage"></p>
+
+    <script>
+        document.getElementById('clickButton').onclick = function () {
+            document.getElementById('clickMessage').innerText = "Button Clicked!";
+        };
+
+        document.getElementById('nameInput').onfocus = function () {
+            document.getElementById('focusMessage').innerText = "Input field is focused!";
+        };
+
+        document.getElementById('nameInput').onblur = function () {
+            document.getElementById('focusMessage').innerText = "Input field lost focus!";
+        };
+
+        document.getElementById('colorSelect').onchange = function () {
+            let selectedColor = this.value;
+            document.getElementById('colorMessage').innerText = "You selected: " + selectedColor;
+        };
+
+        document.getElementById('textInput').onkeyup = function () {
+            let typedText = this.value;
+            document.getElementById('keyMessage').innerText = "You typed: " + typedText;
+        };
+    </script>
+
+</body>
+
+</html>

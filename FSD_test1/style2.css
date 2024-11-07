@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+}
+
+.joke-text {
+    display: flex;
+    margin: 10px;
+}
+
+.joke-length {
+    display: flex;
+    margin: 10px;
+}
+
+#generate {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: yellow;
+    color: black;
+    font-weight: bolder;
+}
+
+#clear {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    font-weight: bolder;
+}

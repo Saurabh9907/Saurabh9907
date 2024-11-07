@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            width: 400px;
+            height: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        input {
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            width: 100%;
+            background-color: #7ea880;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #btn2 {
+            padding: 10px;
+            width: 100%;
+            background-color: rgb(124, 96, 96);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container" id="myform">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" required><br>
+    <input type="password" id="password" placeholder="Password" required><br>
+    <button onclick="login()">Login</button>
+    <br><br>
+    <button id="btn2" onclick="reset()">Reset</button>
+    <p id="error-message" style="color: red; display: none;">Invalid credentials. Please try again.</p>
+</div>
+
+<script>
+    function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (username === "AIMLC" && password === "AIMLC") {
+            window.location.href = "login.html";
+        } else {
+            document.getElementById("error-message").style.display = "block";
+        }
+    }
+    function reset() {
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("error-message").style.display = "none";
+    }
+</script>
+
+</body>
+</html>

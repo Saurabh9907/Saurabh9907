@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<button id="button"> Click me</button>
+<p id="para">_______________</p>
+<label for="name">Name:</label>
+<input type="text" id="name" placeholder="enter your name">
+<p id="focusMessage"></p>
+
+<label for="colorSelector">selector a color:</label>
+<select name="" id="colorselector"> 
+    <option value="">--choose--</option>
+    <option value="red">"red"</option>
+    <option value="red">"blue"</option>
+</select>
+<body>
+    <script>
+        document.getElementById("button").onclick = function(){
+            document.getElementById("para").innerHTML = "<b>Button Clicked!</b>"
+        }
+        document.getElementById('name').onfocus = function(){
+            document.getElementById('focusMessage').innerText = "input field is focoused"
+        }
+    </script>
+</body>
+</html>
